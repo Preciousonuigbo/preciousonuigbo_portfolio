@@ -10,6 +10,7 @@
 
 a {
     text-decoration: none;
+    color: black;
 }
 
 li{
@@ -24,6 +25,7 @@ header {
     position: sticky;
     top: 0;
     background-color: rgb(251, 253, 253);
+    z-index: 50;
 }
 
 nav{
@@ -193,11 +195,234 @@ nav{
     text-align: center;
 }
 
+.Projects {
+    margin: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+}
+
+.Project-intro{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    width: 90%;
+}
+
+.project-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.project-list article{
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 15px;
+}
+
+.project-list article:nth-child(1){
+    background-image: url(../Images/e-commerce\ website.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.project-list article:nth-child(2){
+    background-image: url(../Images/restaurant\ website.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.project-list article:nth-child(3){
+    background-image: url(../Images/travel\ website.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.overlay1 {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0, 0.4);
+    position: absolute;
+    border-radius: 15px;
+}
+
+.overlay2 {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0, 0.4);
+    position: absolute;
+    border-radius: 15px;
+}
+
+.overlay3 {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0, 0.4);
+    position: absolute;
+    border-radius: 15px;
+}
+.project-list {
+    z-index: 10;
+    color: #f6f6f6;
+}
+.project-list h4{
+    font-size: 1.2rem;
+    color: #f6f6f6;
+    z-index: 10;
+}
+
+
+.project-list p{
+    font-size: 0.95rem;
+     color: #f6f6f6;
+    z-index: 10;
+}
+
+.project-list button{
+    align-self: center;
+    background-color: gold;
+    padding: 0.6rem 1rem;
+    border-radius: 15px;
+    outline: 0;
+    border: none;
+    z-index: 10; 
+}
+
+.Contact{
+    display: flex; 
+    flex-direction: column; 
+    gap: 2rem; 
+    margin: 4rem 0; 
+    width: 100%;
+}
+
+.Contact-intro{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.Contact-intro h3{
+    font-size: 1.2rem;
+    text-align: center;
+    width: 90%; 
+}
+
+.Contact-intro p{
+    font-size: 0.9rem;
+    text-align: center;
+    width: 90%; 
+}
+
+.Contact-info{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: center;
+
+}
+
+.socials ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    font-size: 1.1rem;
+}
+span {
+    font-size: 1.5rem;
+}
+.form-details{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+form {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 15px;
+    background-color: blue;
+}
+ 
+form label {
+    color:rgba(255, 255, 255, 0.9) ;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+form input{
+    outline: 0;
+    height: 2.5rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 10px;
+    border: none;
+}
+
+form textarea{
+    min-height: 6rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    border: none;
+    outline: 0;
+}
+form button{
+    padding: 0.9rem 3rem;
+    border-radius: 15px;
+    font-weight: 600;
+    transition: filter 0.3s ease-in-out;
+    margin: 0.9rem 0;
+    align-self: center
+}
+
+form button:hover{
+    filter: brightness(0.9);
+}
+
+footer{
+    background-color: blue;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    min-height: 10rem;
+}
+
+footer ul{
+    display: flex;
+    gap: 1rem;
+}
 
 @media (min-width: 768px) {
     .Hero{
         min-height: 60vh;
-    }.About{
+    }
+    .About{
         width: 100%;
         grid-template-columns: 1fr 1fr;
     }
@@ -207,12 +432,22 @@ nav{
     }
 
     .skill-btn{
-        font-size: 10rem;
+        font-size: 4rem;
         width: 100%;
     }
 
     .skill-card h4{
     font-size: 1.3rem;
+    }
+
+    .project-list {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;}
+
+    .Contact-info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
 }
     
 }
@@ -248,4 +483,6 @@ nav{
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: auto;
     }
+
+
 }
